@@ -13,6 +13,16 @@ if %errorlevel% equ 0 (
     del python-installer.exe
 )
 
+:: Check if Python is installed correctly
+where python > nul 2>&1
+if %errorlevel% equ 0 (
+    echo Python installation verified.
+) else (
+    echo Failed to install Python. Exiting...
+    pause
+    exit
+)
+
 :: Define required libraries
 set "required_libraries=requests beautifulsoup4 keyboard pyperclip"
 
