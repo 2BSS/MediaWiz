@@ -1,0 +1,2 @@
+# MediaWiz
+ Upload media automatically
